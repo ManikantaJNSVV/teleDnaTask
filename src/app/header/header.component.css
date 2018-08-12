@@ -1,0 +1,16 @@
+
+navbar{
+    background : #02033b !important;
+    margin: auto;
+}
+
+
+p{display: inline-block;
+    margin: auto;
+    padding-left: 15px;
+    font-family: relwa;
+    font-size: 22px;
+}
+.navbar-brand{
+    color: #fff !important;
+}

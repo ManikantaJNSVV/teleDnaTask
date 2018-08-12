@@ -1,0 +1,82 @@
+<div class="bgimg">
+
+    <div class="container">
+        <div class="input-field ">
+
+            <div class="row">
+                <!-- selecting skills and tools-->
+                <div class="col-md-3">
+                    <input id="country" placeholder="Skill/Tools" type="text" class="validate filter-input" [(ngModel)]=query (keyup)=filter()
+                        required>
+                    <div class="itm_slct" *ngFor="let item of selected">
+                        <div class="selected" *ngIf="!showSkill">
+                            <span>{{item}}</span>
+                            <a (click)="remove(item)">
+                                <sup>x</sup>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="suggestions" *ngIf="filteredList.length > 0">
+                        <ul *ngFor="let item of filteredList; let idx = index">
+                            <li>
+                                <a (click)="select(item,idx)">{{item}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- selecting preferred sources-->
+                <div class="col-md-3">
+                    <input id="country" placeholder="Search Sources" type="text" class="validate filter-input" [(ngModel)]=source (keyup)=searchSource()
+                        required>
+                    <div *ngFor="let item of selectedSource">
+                        <div class="selected" *ngIf="!showSource">
+                            <span>{{item}}</span>
+                            <a (click)="removeSources(item)">
+                                <sup>x</sup>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="suggestions" *ngIf="filterdSource.length > 0">
+                        <ul *ngFor="let item of filterdSource; let idx = index">
+                            <li>
+                                <a (click)="selectSource(item,idx)">{{item}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- selecting locations-->
+                <div class="col-md-3">
+
+                    <input id="country" placeholder="Locations" type="text" class="validate filter-input" [(ngModel)]=location (keyup)=searchLocation()
+                        required>
+
+                    <div *ngFor="let item of selectedLoc">
+                        <div class="selected" *ngIf="!showLoc">
+                            <span>{{item}}</span>
+                            <a (click)="removeLocations(item)">
+                                <sup>x</sup>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="suggestions" *ngIf="filterdLoc.length > 0">
+                        <ul *ngFor="let item of filterdLoc; let idx = index">
+                            <li>
+                                <a (click)="selectLoc(item,idx)">{{item}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary mb-2 goBtnFelx" (click)=search()>Go</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

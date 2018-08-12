@@ -1,0 +1,56 @@
+
+#mainbg{
+    background-image: url(/assets/img/googlebg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.row{
+    justify-content: center;
+    margin: auto;
+}
+.card{
+    margin-bottom: 25px;
+    width: 75%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,.125);
+
+}
+p{
+    font-size: 16px;
+    color: navy;
+    margin-left: 10px;
+    text-transform: capitalize;
+    display: inline;
+
+}
+.dscrp{
+    font-weight: 600;
+}
+.crd_inner{
+    display: inline;
+    font-size: 15px;
+    margin-bottom: 20px;
+    
+}
+.spn_main{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    color: navy
+}
+
+span{
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+.pagination{
+    text-align: center;
+}
+.cstmName{
+    font-size: 18px;
+    color: red;
+    font-weight: 600;
+    
+}
