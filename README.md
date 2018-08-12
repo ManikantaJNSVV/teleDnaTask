@@ -1,2 +1,0 @@
-# teleDnaTask
-Recruitment Portal
